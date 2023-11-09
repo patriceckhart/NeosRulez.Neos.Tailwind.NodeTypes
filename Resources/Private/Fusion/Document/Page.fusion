@@ -1,0 +1,14 @@
+prototype(NeosRulez.Neos.Tailwind.NodeTypes:Document.Page) < prototype(NeosRulez.Neos.Tailwind:Document.AbstractPage) {
+    body {
+        content = Neos.Fusion:Component {
+            main = Neos.Neos:ContentCollection {
+                nodePath = 'main'
+            }
+            renderer = afx`
+                <main id="page" class="main">
+                    {props.main}
+                </main>
+            `
+        }
+    }
+}

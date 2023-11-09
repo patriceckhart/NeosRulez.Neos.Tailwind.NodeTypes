@@ -1,0 +1,5 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        NeosRulez.Neos.Tailwind.NodeTypes: true

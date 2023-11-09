@@ -1,0 +1,17 @@
+'NeosRulez.Neos.Tailwind.NodeTypes:Document.HomePage':
+  superTypes:
+    'NeosRulez.Neos.Tailwind:Document.AbstractPage': true
+  ui:
+    label: Startseite
+    icon: fas fa-globe-americas
+    inspector:
+      groups:
+        document:
+          label: Startseite
+          icon: fas fa-globe-americas
+  childNodes:
+    footer:
+      type: Neos.Neos:ContentCollection
+  constraints:
+    nodeTypes:
+      'NeosRulez.Neos.Tailwind.NodeTypes:Document.HomePage': false

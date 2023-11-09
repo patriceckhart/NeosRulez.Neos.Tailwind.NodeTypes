@@ -1,0 +1,12 @@
+prototype(NeosRulez.Neos.Tailwind.NodeTypes:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
+    footer = Neos.Neos:ContentCollection {
+        nodePath = ${q(site).children('footer').property('_path')}
+        collection = ${q(site).children('footer').children()}
+    }
+
+    renderer = afx`
+        <footer class="footer">
+            {props.footer}
+        </footer>
+    `
+}

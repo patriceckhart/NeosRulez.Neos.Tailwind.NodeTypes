@@ -1,0 +1,9 @@
+'NeosRulez.Neos.Tailwind.NodeTypes:Document.Page':
+  superTypes:
+    'NeosRulez.Neos.Tailwind:Document.AbstractPage': true
+  ui:
+    label: Seite
+    inspector:
+      groups:
+        document:
+          label: Seite
