@@ -1,0 +1,17 @@
+prototype(NeosRulez.Neos.Tailwind.NodeTypes:Component.AbstractContent) < prototype(Neos.Fusion:Component) {
+    content = false
+
+    nodetypeName = ${String.replace(String.replace(String.toLowerCase(node.nodetype), '.', '-'), ':', '-')}
+    identifier = ${node.identifier}
+
+    container = ${q(node).property('container')}
+
+    nodeIdentifier = ${'node__' + this.identifier}
+    className = ${this.nodetypeName + (this.container ? ' container mx-auto' : '')}
+
+    renderer = afx`
+        <div id={props.nodeIdentifier} class={props.className} >
+            {props.content}
+        </div>
+    `
+}

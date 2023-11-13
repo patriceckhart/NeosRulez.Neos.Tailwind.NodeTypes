@@ -1,0 +1,7 @@
+'NeosRulez.Neos.Tailwind.NodeTypes:Content.Section':
+  superTypes:
+    'NeosRulez.Neos.Tailwind.NodeTypes:Content.AbstractContent': true
+    'Neos.Neos:ContentCollection': true
+  ui:
+    label: Section
+    icon: far fa-square

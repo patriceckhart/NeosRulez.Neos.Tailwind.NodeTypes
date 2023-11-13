@@ -1,0 +1,4 @@
+'Neos.Neos:ContentCollection':
+  constraints:
+    nodeTypes:
+      'NeosRulez.Neos.Tailwind.NodeTypes:Content.Column': false

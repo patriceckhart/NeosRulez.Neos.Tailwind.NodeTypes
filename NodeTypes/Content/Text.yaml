@@ -1,0 +1,20 @@
+'NeosRulez.Neos.Tailwind.NodeTypes:Content.Text':
+  superTypes:
+    'NeosRulez.Neos.Tailwind.NodeTypes:Content.AbstractContent': true
+    'Neos.NodeTypes.BaseMixins:TextMixin': true
+  ui:
+    label: Text
+    icon: fas fa-font
+  properties:
+    text:
+      ui:
+        inline:
+          editorOptions:
+            hyphens: true
+            formatting:
+              h1: true
+              h2: true
+              h3: true
+              h4: true
+              h5: true
+              h6: true

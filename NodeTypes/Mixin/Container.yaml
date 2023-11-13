@@ -1,0 +1,19 @@
+'NeosRulez.Neos.Tailwind.NodeTypes:Mixin.Container':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        container:
+          label: Container
+          icon: far fa-square
+          position: start
+  properties:
+    container:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: Content width
+        reloadIfChanged: true
+        inspector:
+          group: container
+          position: 1

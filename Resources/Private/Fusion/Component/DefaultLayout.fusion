@@ -1,6 +1,7 @@
 prototype(NeosRulez.Neos.Tailwind.NodeTypes:Component.DefaultLayout) < prototype(Neos.Fusion:Component) {
 
     renderer = afx`
+        <NeosRulez.Neos.Tailwind.NodeTypes:Component.Navbar />
         {props.content}
         <NeosRulez.Neos.Tailwind.NodeTypes:Component.Footer />
     `

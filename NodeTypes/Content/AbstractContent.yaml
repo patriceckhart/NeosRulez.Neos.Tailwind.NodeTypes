@@ -1,0 +1,12 @@
+'NeosRulez.Neos.Tailwind.NodeTypes:Content.AbstractContent':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Content': true
+    'NeosRulez.Neos.Tailwind.NodeTypes:Mixin.Container': true
+    'NeosRulez.Neos.Tailwind.NodeTypes:Mixin.Distance': true
+  ui:
+    inspector:
+      groups:
+        content:
+          label: Content
+          icon: fas fa-columns

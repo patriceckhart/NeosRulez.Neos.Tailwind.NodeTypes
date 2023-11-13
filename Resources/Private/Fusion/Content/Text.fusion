@@ -1,0 +1,8 @@
+prototype(NeosRulez.Neos.Tailwind.NodeTypes:Content.Text) < prototype(Neos.Neos:ContentComponent) {
+
+    renderer = afx`
+        <NeosRulez.Neos.Tailwind.NodeTypes:Component.AbstractContent>
+            <Neos.Neos:Editable property="text" />
+        </NeosRulez.Neos.Tailwind.NodeTypes:Component.AbstractContent>
+    `
+}

@@ -1,0 +1,13 @@
+prototype(NeosRulez.Neos.Tailwind.NodeTypes:Content.Section) < prototype(Neos.Neos:ContentComponent) {
+
+    nodes = Neos.Neos:ContentCollection {
+        @context.node = ${node}
+        attributes.class = ${className}
+    }
+
+    renderer = afx`
+        <NeosRulez.Neos.Tailwind.NodeTypes:Component.AbstractContent>
+            {props.nodes}
+        </NeosRulez.Neos.Tailwind.NodeTypes:Component.AbstractContent>
+    `
+}

@@ -1,0 +1,32 @@
+prototype(NeosRulez.Neos.Tailwind.NodeTypes:Content.Columns) < prototype(Neos.Neos:ContentComponent) {
+
+    columns = ${q(node).property('columns')}
+    gap = ${q(node).property('gap')}
+    className = ${'grid grid-cols-' + this.columns + ' gap-' + this.gap}
+    @context.className = ${this.className}
+
+    nodes = Neos.Neos:ContentCollection {
+        @context.node = ${node}
+        attributes.class = ${className}
+    }
+
+    renderer = afx`
+        <NeosRulez.Neos.Tailwind.NodeTypes:Component.AbstractContent>
+            {props.nodes}
+        </NeosRulez.Neos.Tailwind.NodeTypes:Component.AbstractContent>
+    `
+}
+
+prototype(NeosRulez.Neos.Tailwind.NodeTypes:Content.Column) < prototype(Neos.Neos:ContentComponent) {
+
+    columns = ${q(node).property('columns')}
+    className = ${'col-span-' + this.columns}
+
+    nodes = Neos.Neos:ContentCollection {
+        @context.node = ${node}
+    }
+
+    renderer = afx`
+        <div class={props.className}>{props.nodes}</div>
+    `
+}

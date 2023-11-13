@@ -1,0 +1,48 @@
+prototype(NeosRulez.Neos.Tailwind.NodeTypes:Component.Navbar) < prototype(Neos.Neos:ContentComponent) {
+
+    items = Neos.Neos:MenuItems
+    siteNode = ${q(site)}
+
+    renderer = afx`
+        <header class="header">
+            <div class="flex flex-row justify-between gap-5">
+                <div>
+                    <Neos.Neos:NodeLink node={props.siteNode}>
+                        Logo
+                    </Neos.Neos:NodeLink>
+                </div>
+                <div>
+                    <NeosRulez.Neos.Tailwind.NodeTypes:Component.Navbar.Items items={props.items} />
+                </div>
+            </div>
+        </header>
+    `
+}
+
+prototype(NeosRulez.Neos.Tailwind.NodeTypes:Component.Navbar.Items) < prototype(Neos.Fusion:Component) {
+
+    items = false
+    dropdown = false
+
+    renderer = afx`
+        <ul @if.render={props.items} class={props.dropdown ? 'absolute left-0 top-0 flex flex-col pt-10 hidden group-hover:flex' : 'group relative flex flex-row'} >
+            <Neos.Fusion:Loop items={props.items} >
+                <NeosRulez.Neos.Tailwind.NodeTypes:Component.Navbar.Item item={item} />
+            </Neos.Fusion:Loop>
+        </ul>
+    `
+}
+
+prototype(NeosRulez.Neos.Tailwind.NodeTypes:Component.Navbar.Item) < prototype(Neos.Fusion:Component) {
+
+    item = false
+
+    renderer = afx`
+        <li>
+            <Neos.Neos:NodeLink node={props.item.node} >
+                {props.item.node.properties.title}
+            </Neos.Neos:NodeLink>
+        </li>
+        <NeosRulez.Neos.Tailwind.NodeTypes:Component.Navbar.Items @if.render={props.item.subItems} items={props.item.subItems} dropdown={true} />
+    `
+}

@@ -1,0 +1,16 @@
+'NeosRulez.Neos.Tailwind.NodeTypes:Content.Column':
+  superTypes:
+    'NeosRulez.Neos.Tailwind.NodeTypes:Content.AbstractContent': true
+    'Neos.Neos:ContentCollection': true
+    'NeosRulez.Neos.Tailwind.NodeTypes:Mixin.Columns': true
+  ui:
+    label: Column
+    icon: fas fa-columns
+  properties:
+    columns:
+      ui:
+        label: Col span
+  constraints:
+    nodeTypes:
+      'NeosRulez.Neos.Tailwind.NodeTypes:Content.Columns': false
+      'NeosRulez.Neos.Tailwind.NodeTypes:Content.Column': false
